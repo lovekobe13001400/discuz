@@ -10,6 +10,9 @@
 if(!defined('IN_DISCUZ')) {
 	exit('Access Denied');
 }
+//封面图
+$head_img = $_POST['head_img'];
+$yun_url = $_POST['yun_url'];
 
 $op = in_array($_GET['op'], array('edit', 'delete', 'related', 'batch', 'pushplus', 'verify', 'checkhtmlname')) ? $_GET['op'] : 'add';
 $aid = intval($_GET['aid']);
@@ -23,6 +26,7 @@ if($aid) {
 		showmessage('article_not_exist', dreferer());
 	}
 }
+
 
 loadcache('portalcategory');
 $portalcategory = $_G['cache']['portalcategory'];
@@ -39,7 +43,9 @@ if(empty($catid) && $article) {
 $htmlstatus = !empty($_G['setting']['makehtml']['flag']) && $portalcategory[$catid]['fullfoldername'];
 
 if(submitcheck("articlesubmit", 0, $seccodecheck, $secqaacheck)) {
-
+	if(empty($head_img)){
+		showmessage('封面图为空，请上传！');
+	}
 	if($aid) {
 		check_articleperm($article['catid'], $aid, $article);
 	} else {
@@ -97,7 +103,8 @@ if(submitcheck("articlesubmit", 0, $seccodecheck, $secqaacheck)) {
 		'status' => $article_status,
 		'highlight' => $style,
 		'showinnernav' => empty($_POST['showinnernav']) ? '0' : '1',
-		'head_img'=>$img_url
+		'head_img'=>$head_img,
+		'yun_url' => $yun_url
 	);
 
 	if(empty($setarr['catid'])) {
@@ -118,6 +125,7 @@ if(submitcheck("articlesubmit", 0, $seccodecheck, $secqaacheck)) {
 		$setarr['username'] = $_G['username'];
 		$setarr['id'] = intval($_POST['id']);
 		$setarr['htmlname'] = $htmlname;
+
 		$table = '';
 		if($setarr['id']) {
 			if($_POST['idtype']=='blogid') {

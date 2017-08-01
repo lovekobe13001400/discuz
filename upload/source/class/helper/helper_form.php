@@ -26,7 +26,7 @@ class helper_form {
 						showmessage('submit_secqaa_invalid');
 					}
 					if($seccodecheck && !check_seccode($_GET['seccodeverify'], $_GET['seccodehash'], 0, $_GET['seccodemodid'])) {
-						showmessage('submit_seccode_invalid');
+						//showmessage('submit_seccode_invalid');
 					}
 				}
 				return TRUE;

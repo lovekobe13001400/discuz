@@ -1,8 +1,8 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('portalcp_article');
 0
-|| checktplrefresh('./template/default/portal/portalcp_article.htm', './template/default/home/editor_image_menu.htm', 1501291548, '1', './data/template/1_1_portal_portalcp_article.tpl.php', './template/default', 'portal/portalcp_article')
-|| checktplrefresh('./template/default/portal/portalcp_article.htm', './template/default/common/seccheck.htm', 1501291548, '1', './data/template/1_1_portal_portalcp_article.tpl.php', './template/default', 'portal/portalcp_article')
-|| checktplrefresh('./template/default/portal/portalcp_article.htm', './template/default/common/upload.htm', 1501291548, '1', './data/template/1_1_portal_portalcp_article.tpl.php', './template/default', 'portal/portalcp_article')
+|| checktplrefresh('./template/default/portal/portalcp_article.htm', './template/default/home/editor_image_menu.htm', 1501550373, '1', './data/template/1_1_portal_portalcp_article.tpl.php', './template/default', 'portal/portalcp_article')
+|| checktplrefresh('./template/default/portal/portalcp_article.htm', './template/default/common/seccheck.htm', 1501550373, '1', './data/template/1_1_portal_portalcp_article.tpl.php', './template/default', 'portal/portalcp_article')
+|| checktplrefresh('./template/default/portal/portalcp_article.htm', './template/default/common/upload.htm', 1501550373, '1', './data/template/1_1_portal_portalcp_article.tpl.php', './template/default', 'portal/portalcp_article')
 ;?><?php include template('common/header'); if($op == 'delete') { ?>
 
 <h3 class="flb">
@@ -118,7 +118,64 @@ make_html('portal.php?mod=view&aid=<?php echo $aid;?>', $('makehtml_'));
 <div class="mn">
 <div class="bm bw0">
 <h1 class="mbm bbs mt"><?php if(!empty($aid)) { ?>编辑文章<?php } else { ?>发布文章<?php } ?></h1>
+    <!--文件上传-->
 <script src="<?php echo $_G['setting']['jspath'];?>calendar.js?<?php echo VERHASH;?>" type="text/javascript"></script>
+    <script src="<?php echo $_G['setting']['jspath'];?>moment.js" type="text/javascript"></script>
+    
+    <script>
+        //上传文件
+        function uploadFile(){
+            //var img_src = "<?php echo DISCUZ_ROOT;?>";
+            var files=document.getElementById("myinput").files;
+            if(files.length<=0){
+                console.log('请上传图片');
+            }
+            var img;
+            for(var i=0;i<files.length;i++){
+                img = readImage(files[i])
+            }
+
+            //console.log(img);
+        }
+
+
+        function readImage(obj){
+
+            var xhr = new XMLHttpRequest();
+
+            var fd = new FormData();
+
+            var head_img;
+            fd.append("pic", obj);
+            // fd.append("username", "xiaopingping");
+
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var responseText = xhr.responseText;
+
+                    var path = 'uploads/'+moment().format("YYYY-MM-DD");
+                    var obj = eval('(' + responseText + ')');
+                 
+                    var head_img = path+'/'+obj.data.savename;
+                    //修改某个值
+                    document.getElementById('head_img').value = head_img;
+                    var discuz_root = document.getElementById('discuz_root').value;
+                    document.getElementById('head_img').value = head_img;
+                    document.getElementById('show_head_img').src =  head_img;
+
+                    //v
+                    //console.log(img_src);
+                }
+            }
+
+            xhr.open("POST", "upload.php");
+
+            xhr.send(fd);
+            return head_img;
+
+        }
+    </script>
+
 <form method="post" autocomplete="off" id="articleform" action="portal.php?mod=portalcp&amp;ac=article<?php if($_GET['modarticlekey']) { ?>&amp;modarticlekey=<?php echo $_GET['modarticlekey'];?><?php } ?>" enctype="multipart/form-data">
 <?php if(!empty($_G['setting']['pluginhooks']['portalcp_top'])) echo $_G['setting']['pluginhooks']['portalcp_top'];?>
 <div class="dopt cl">
@@ -166,7 +223,7 @@ make_html('portal.php?mod=view&aid=<?php echo $aid;?>', $('makehtml_'));
 <dd><input type="text" name="fromurl" class="px p_fre" value="<?php echo $article['fromurl'];?>" size="30" /></dd>
 <dt>发布时间</dt>
 <dd><input type="text" name="dateline" class="px p_fre" value="<?php echo $article['dateline'];?>" size="30" onclick="showcalendar(event, this, true)" /></dd>
-
+   
 </dl>
 </div>
 <div class="sadd z">
@@ -197,7 +254,10 @@ make_html('portal.php?mod=view&aid=<?php echo $aid;?>', $('makehtml_'));
 <dd><input type="text" class="px p_fre" name="url" value="<?php echo $article['url'];?>" size="30" /></dd>
 <dt>原作者</dt>
 <dd><input type="text" name="author" class="px p_fre" value="<?php echo $article['author'];?>" size="30" /></dd>
-<?php if($category[$catid]['allowcomment']) { ?>
+    <dt>720云地址</dt>
+    <dd><input type="text" name="yun_url" class="px p_fre" placeholder='例如:http://720yun.com/t/f3e2cxrdwnf?pano_id=984179' value="<?php echo $article['yun_url'];?>" size="90" onclick="showcalendar(event, this, true)" /></dd>
+
+    <?php if($category[$catid]['allowcomment']) { ?>
 <dt>评论设置</dt>
 <dd><label for="ck_allowcomment"><input type="checkbox" name="forbidcomment" id="ck_allowcomment" class="pc" value="1"<?php if(isset($article['allowcomment']) && empty($article['allowcomment'])) { ?>checked="checked"<?php } ?> />禁止评论</label></dd>
 <?php } ?>
@@ -206,7 +266,16 @@ make_html('portal.php?mod=view&aid=<?php echo $aid;?>', $('makehtml_'));
 </div>
 <?php if(!empty($_G['setting']['pluginhooks']['portalcp_extend'])) echo $_G['setting']['pluginhooks']['portalcp_extend'];?>
 </div>
-
+    <div class="exfm">
+        <dt>文章封面</dt>
+        <dd> <input type="file" name="pic[]" multiple id="myinput">
+            <input type="button" onclick="uploadFile()" value="上传"/>
+            <input type="hidden" id='discuz_root'value=""/>
+        </dd>
+        <dd><img id='show_head_img' style="width:100px;height:100px;"src="<?php echo $article['head_img'];?>">
+        </dd>
+        <dd><input type="hidden" id="head_img" name="head_img" value="" /></dd>
+    </div>
 <div class="pbw">
 <script src="<?php echo STATICURL;?>image/editor/editor_function.js?<?php echo VERHASH;?>" type="text/javascript"></script><div id="icoImg_image_menu" style="display: none" unselectable="on">
 <table width="100%" cellpadding="0" cellspacing="0" class="fwin"><tr><td class="t_l"></td><td class="t_c"></td><td class="t_r"></td></tr><tr><td class="m_l">&nbsp;&nbsp;</td><td class="m_c"><div class="mtm mbm">
@@ -552,7 +621,7 @@ $sectpl = str_replace("'", "\'", $sectpl);?><?php if($secqaacheck) { ?>
 <span id="secqaa_q<?php echo $sechash;?>"></span>		
 <script type="text/javascript" reload="1">updatesecqaa('q<?php echo $sechash;?>', '<?php echo $sectpl;?>', '<?php echo $_G['basescript'];?>::<?php echo CURMODULE;?>');</script>
 <?php } if($seccodecheck) { ?>
-<span id="seccode_c<?php echo $sechash;?>"></span>		
+<!--<span id="seccode_c--><?php //echo $sechash;?><!--"></span>		-->
 <script type="text/javascript" reload="1">updateseccode('c<?php echo $sechash;?>', '<?php echo $sectpl;?>', '<?php echo $_G['basescript'];?>::<?php echo CURMODULE;?>');</script>
 <?php } ?></div>
 <?php } ?>

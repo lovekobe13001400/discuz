@@ -1,0 +1,8 @@
+1.
+C:\wamp\www\discuz\upload\source\module\portal\portal_portalcp.php
+2.文章处理
+C:\wamp\www\discuz\upload\source\include\portalcp\portalcp_article.php
+3.提交的内容教研
+C:\wamp\www\discuz\upload\source\function\function_core.php
+4.根目录
+require DISCUZ_ROOT.'./source/module/forum/forum_'.$mod.'.php';

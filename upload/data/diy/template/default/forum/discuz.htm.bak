@@ -1,4 +1,4 @@
-{template common/header}
+{template common/header2}
     <!-- 以上是头部-->
 <iframe src="./img_files/indexslider.html" frameborder="0" scrolling="no" style="width:100%;height:370px;border:0;overflow:hidden"></iframe>
 <div class="clear"></div>
@@ -398,4 +398,4 @@ jq(".deantabcontent li").eq(s).show().siblings().hide();
     </div>
 
 </div>  </div>
-{template common/footer}
+{template common/footer2}
