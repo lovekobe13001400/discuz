@@ -22,7 +22,7 @@
 <div class="deanpartr">
     	<div class="bm">
 <div class="bm_h cl">
-<a href="http://www.gtzs.com/portal.php?mod=rss&catid=16" class="y xi2 rss" target="_blank" title="RSS">订阅</a><h1 class="xs2">{$cat['catname']}</h1>
+<a href="http://www.gtzs.com/portal.php?mod=rss&catid=16" class="y xi2 rss" target="_blank" title="RSS"></a><h1 class="xs2">{$cat['catname']}</h1>
 </div>
             <style type="text/css">
             	#deannews{}
@@ -37,9 +37,10 @@
             <ul id="deannews">
                 	<li>
                     	<div class="deannewleft"><a href="http://www.gtzs.com/article-430-1.html" target="_blank">
-                            <img src="{$value['pic']}" width="160" height="96" alt="【格堂板材学习篇】自然孕育千年舟" class="tn"></a></div>                        <div class="deannewright">
+                            <img src="{$value['head_img']}" width="160" height="96" alt="" class="tn"></a></div>
+                        <div class="deannewright">
                         	<h2><a href="http://www.gtzs.com/article-430-1.html" target="_blank" class="xi2" style="">{$value['title']} </h2>
-                            <div class="deannewsummarys">待定</div>
+                            <div class="deannewsummarys">{$value['summary']}</div>
                             <div class="deannewtime">
                                                                 <span class="xg1"> {$value['dateline']}1</span>
                                                             </div>
@@ -51,7 +52,7 @@
                </div>
 <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
 </div>
-    <!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]--><div class="pgs cl"><div class="pg"><strong>1</strong><a href="http://www.gtzs.com/news/study/index.php?page=2">2</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;http://www.gtzs.com/news/study/index.php?page=&#39;+this.value;; doane(event);}"><span title="共 2 页"> / 2 页</span></label><a href="http://www.gtzs.com/news/study/index.php?page=2" class="nxt">下一页</a></div></div>    </div>
+    <!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]--><div class="pgs cl"><div class="pg"><strong>1</strong><a href="">2</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;http://www.gtzs.com/news/study/index.php?page=&#39;+this.value;; doane(event);}"><span title="共 2 页"> / 2 页</span></label><a href="" class="nxt">下一页</a></div></div>    </div>
     <div class="clear"></div>
 
 </div>

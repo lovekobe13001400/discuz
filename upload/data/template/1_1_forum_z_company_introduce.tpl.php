@@ -101,11 +101,9 @@
 
                         <!--[diy=diysummarytop]--><div id="diysummarytop" class="area"></div><!--[/diy]-->
 
-                        <div class="s"><div>
-                        </div>
-                        </div>
-                        <!--[diy=diysummarybottom]-->
-                        <div id="diysummarybottom" class="area"></div><!--[/diy]-->
+                        <div class="s"><div><strong>摘要</strong>: <?php echo $article['summary'];?></div></div>
+                        <!--[diy=diysummarybottom]--><div id="diysummarybottom" class="area"></div><!--[/diy]-->
+
 
                         <div class="d">
 
@@ -115,10 +113,10 @@
 
 
 
-                        <div class="pren pbm cl">
-                            <em>上一篇：<a href="http://www.gtzs.com/article-135-1.html">格堂装饰正月初八上班抢红包啦</a></em>
-                            <em>下一篇：<a href="http://www.gtzs.com/article-161-1.html">格堂装饰的创新之路</a></em>
-                         <div>
+<!--                        <div class="pren pbm cl">-->
+<!--                            <em>上一篇：<a href="http://www.gtzs.com/article-135-1.html">格堂装饰正月初八上班抢红包啦</a></em>-->
+<!--                            <em>下一篇：<a href="http://www.gtzs.com/article-161-1.html">格堂装饰的创新之路</a></em>-->
+<!--                         <div>-->
                     </div>
 
                     <!--[diy=diycontentrelatetop]--><div id="diycontentrelatetop" class="area"></div><!--[/diy]-->

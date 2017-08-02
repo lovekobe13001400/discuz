@@ -102,6 +102,59 @@
 make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 </script>
 <!--{else}-->
+<script>
+	//上传文件
+	function uploadFile(){
+		//var img_src = "<?php echo DISCUZ_ROOT;?>";
+		var files=document.getElementById("myinput").files;
+		if(files.length<=0){
+			console.log('请上传图片');
+		}
+		var img;
+		for(var i=0;i<files.length;i++){
+			img = readImage(files[i])
+		}
+
+		//console.log(img);
+	}
+
+
+	function readImage(obj){
+
+		var xhr = new XMLHttpRequest();
+
+		var fd = new FormData();
+
+		var head_img;
+		fd.append("pic", obj);
+		// fd.append("username", "xiaopingping");
+
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				var responseText = xhr.responseText;
+
+				var path = 'uploads/'+moment().format("YYYY-MM-DD");
+				var obj = eval('(' + responseText + ')');
+
+				var head_img = path+'/'+obj.data.savename;
+				//修改某个值
+				document.getElementById('head_img').value = head_img;
+				var discuz_root = document.getElementById('discuz_root').value;
+				document.getElementById('head_img').value = head_img;
+				document.getElementById('show_head_img').src =  head_img;
+
+				//v
+				//console.log(img_src);
+			}
+		}
+
+		xhr.open("POST", "upload.php");
+
+		xhr.send(fd);
+		return head_img;
+
+	}
+</script>
 
 <div id="pt" class="bm cl">
 	<div class="z">
@@ -123,6 +176,7 @@ make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 		<div class="bm bw0">
 			<h1 class="mbm bbs mt"><!--{if !empty($aid)}-->{lang article_edit}<!--{else}-->{lang article_publish}<!--{/if}--></h1>
 			<script type="text/javascript" src="{$_G[setting][jspath]}calendar.js?{VERHASH}"></script>
+			<script type="text/javascript" src="{$_G[setting][jspath]}moment.js"></script>
 			<form method="post" autocomplete="off" id="articleform" action="portal.php?mod=portalcp&ac=article{if $_GET[modarticlekey]}&modarticlekey=$_GET[modarticlekey]{/if}" enctype="multipart/form-data">
 				<!--{hook/portalcp_top}-->
 				<div class="dopt cl">
@@ -203,6 +257,12 @@ make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 							<dd><input type="text" class="px p_fre" name="url" value="$article[url]" size="30" /></dd>
 							<dt>{lang article_author}</dt>
 							<dd><input type="text" name="author" class="px p_fre" value="$article[author]" size="30" /></dd>
+
+							<dt>720云地址</dt>
+							<dd><input type="text" name="yun_url" class="px p_fre" placeholder='例如:http://720yun.com/t/f3e2cxrdwnf?pano_id=984179' size="120" value="$article['yun_url']" /></dd>
+
+
+
 							<!--{if $category[$catid][allowcomment]}-->
 								<dt>{lang article_comment_setup}</dt>
 								<dd><label for="ck_allowcomment"><input type="checkbox" name="forbidcomment" id="ck_allowcomment" class="pc" value="1"{if isset($article['allowcomment']) && empty($article['allowcomment'])}checked="checked"{/if} />{lang article_forbidcomment_description}</label></dd>
@@ -212,7 +272,16 @@ make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 					</div>
 					<!--{hook/portalcp_extend}-->
 				</div>
-
+	<div class="exfm">
+		<dt>文章封面</dt>
+		<dd> <input type="file" name="pic[]" multiple id="myinput">
+			<input type="button" onclick="uploadFile()" value="上传"/>
+			<input type="hidden" id='discuz_root'value=""/>
+		</dd>
+		<dd><img id='show_head_img' style="width:100px;height:100px;"src="$article[head_img]">
+		</dd>
+		<dd><input type="hidden" id="head_img" name="head_img" value="$article[head_img]" /></dd>
+	</div>
 				<div class="pbw">
 					<script type="text/javascript" language="javascript" src="{STATICURL}image/editor/editor_function.js?{VERHASH}"></script>
 					<!--{subtemplate home/editor_image_menu}-->
@@ -254,10 +323,6 @@ make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 
 				<!--{hook/portalcp_bottom}-->
 
-				<!--{if $secqaacheck || $seccodecheck}-->
-					<!--{block sectpl}--><sec> <span id="sec<hash>" onclick="showMenu(this.id)"><sec></span><div id="sec<hash>_menu" class="p_pop p_opt" style="display:none"><sec></div><!--{/block}-->
-					<div class="exfm pns"><!--{subtemplate common/seccheck}--></div>
-				<!--{/if}-->
 
 				<div class="ptm pbm">
 					<button type="button" id="issuance" class="pn pnc" name="articlebutton" onclick="validate(this);"><strong>{lang submit}</strong></button>

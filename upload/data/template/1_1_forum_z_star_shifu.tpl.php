@@ -100,7 +100,7 @@ initSearchmenu('scbar', '');
 .deanstarss a{ color:#8f1d1d;}
 </style>
 <div class="deanstars">
-<div class="deantitle"><h2><?php echo $cat['catname'];?>-CHEF</h2><span style=" padding-left:65px;">格堂装饰为您的爱家提供强大的设计和施工团队</span><div class="clear"></div></div>
+<div class="deantitle"><h2><?php echo $cat['catname'];?>-CHEF</h2><span style=" padding-left:65px;">致尚一品装饰为您的爱家提供强大的设计和施工团队</span><div class="clear"></div></div>
 <div class="clear"></div>
 <div class="deanstarsc"><!--[diy=deanstars]--><div id="deanstars" class="area"></div><!--[/diy]-->
 
@@ -108,7 +108,6 @@ initSearchmenu('scbar', '');
 </div>
     	<div class="bm">
 <div class="bm_h cl">
-<a href="http://www.gtzs.com/portal.php?mod=rss&amp;catid=14" class="y xi2 rss" target="_blank" title="RSS">订阅</a><h1 class="xs2"><?php echo $cat['catname'];?></h1>
 </div>
             <style type="text/css">
             	#deannews{}
@@ -123,8 +122,9 @@ initSearchmenu('scbar', '');
             </style>
 <div class="bm_c xld">
 <div id="deannews">
-<ul>                <?php if(is_array($cat_list)) foreach($cat_list as $key => $value) { ?>                	<li>
-                    	<div class="deannewpic"><img src="<?php echo $value['pic'];?>" width="197" height="230" alt="泥工" class="tn"></div>                        <div class="deannewinfo">
+<ul>                <?php if(is_array($cat_list)) foreach($cat_list as $key => $value) { ?>
+        <li>
+                    	<div class="deannewpic"><img src="<?php echo $value['head_img'];?>" width="197" height="230" alt="泥工" class="tn"></div>                        <div class="deannewinfo">
                         	<h2><?php echo $value['title'];?> </h2>
 <div class="clear"></div>
                             <div class="deannewsummarys"></div>
@@ -133,7 +133,8 @@ initSearchmenu('scbar', '');
                                                                                             </div>
                         </div>
                         
-                    </li>
+        </li>
+
                     <?php } ?>
                 
                 
@@ -145,7 +146,9 @@ initSearchmenu('scbar', '');
 </div>
 <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
 </div>
-    <!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]--><div class="pgs cl"><div class="pg"><strong>1</strong><a href="http://www.gtzs.com/team/shifu/index.php?page=2">2</a><a href="http://www.gtzs.com/team/shifu/index.php?page=3">3</a><a href="http://www.gtzs.com/team/shifu/index.php?page=4">4</a><a href="http://www.gtzs.com/team/shifu/index.php?page=5">5</a><a href="http://www.gtzs.com/team/shifu/index.php?page=6">6</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;http://www.gtzs.com/team/shifu/index.php?page=&#39;+this.value;; doane(event);}"><span title="共 6 页"> / 6 页</span></label><a href="http://www.gtzs.com/team/shifu/index.php?page=2" class="nxt">下一页</a></div></div>    </div>
+    <!--[diy=listcontenttop]-->
+<!--    <div id="listcontenttop" class="area"></div><!--[/diy]-->
+<!--    <div class="pgs cl"><div class="pg"><strong>1</strong><a href="http://www.gtzs.com/team/shifu/index.php?page=2">2</a><a href="http://www.gtzs.com/team/shifu/index.php?page=3">3</a><a href="http://www.gtzs.com/team/shifu/index.php?page=4">4</a><a href="http://www.gtzs.com/team/shifu/index.php?page=5">5</a><a href="http://www.gtzs.com/team/shifu/index.php?page=6">6</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;http://www.gtzs.com/team/shifu/index.php?page=&#39;+this.value;; doane(event);}"><span title="共 6 页"> / 6 页</span></label><a href="http://www.gtzs.com/team/shifu/index.php?page=2" class="nxt">下一页</a></div></div>    </div>-->
     <div class="clear"></div>
 
 </div>

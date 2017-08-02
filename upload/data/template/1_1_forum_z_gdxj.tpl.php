@@ -44,7 +44,8 @@
     .ico_increase, .ico_fall{ background:none;}
     .deanh2{ font-size:18px; padding:10px;}
         </style>
-       <?php include template('common/left2'); ?>    <div class="mn ounq" style="width:974px; padding-left:15px; padding-right:10px; overflow:hidden; border-left:1px solid #ebebeb; float:right; background:#fff;">
+       <?php include template('common/left2'); ?>
+        <div class="mn ounq" style="width:974px; padding-left:15px; padding-right:10px; overflow:hidden; border-left:1px solid #ebebeb; float:right; background:#fff;">
     <!--[diy=comiis_ltopad]--><div id="comiis_ltopad" class="area"></div><!--[/diy]-->
         <div class="clear"></div>
     <div class="deanh20" style="height:20px; width:100px;">&nbsp;</div>
@@ -52,43 +53,44 @@
     <div class="drag">
     <!--[diy=diy4]--><div id="diy4" class="area"></div><!--[/diy]-->
     </div>
-    <div id="pgt" class="bm bw0 pgs cl">
-    <span id="fd_page_top"><div class="pg"><strong>1</strong><a href="http://www.gtzs.com/forum-3-2.html">2</a><a href="http://www.gtzs.com/forum-3-3.html">3</a><a href="http://www.gtzs.com/forum-3-4.html">4</a><a href="http://www.gtzs.com/forum-3-5.html">5</a><a href="http://www.gtzs.com/forum-3-6.html">6</a><a href="http://www.gtzs.com/forum-3-7.html">7</a><a href="http://www.gtzs.com/forum-3-8.html">8</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;forum.php?mod=forumdisplay&amp;fid=3&amp;page=&#39;+this.value;; doane(event);}"><span title="共 8 页"> / 8 页</span></label><a href="http://www.gtzs.com/forum-3-2.html" class="nxt">下一页</a></div></span>
-    <span class="pgb y"><a href="http://www.gtzs.com/forum.php">返&nbsp;回</a></span>
-    <a href="javascript:;" id="newspecial" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=3&#39;)" title="发新帖"><img src="./img_gdxj_files/pn_post.png" alt="发新帖"></a>
-    </div>
-    <div class="comiis_kmlb_tabfl">
-    <div class="comiis_ltype">
-    <a href="./img_gdxj_files/工地巡检-衢州装修-衢州装饰-格堂装饰 - 衢州格堂装饰.html" class="comiis_ltype_an kmbtn">帖子<em>◆</em></a>
-    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;filter=digest&amp;digest=1" class="comiis_ltype_an">精华</a>
-    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;filter=hot" class="comiis_ltype_an">热帖</a>
-    </div>
-    <div class="comiis_kmlb_ss">
-    <form id="scform" method="post" autocomplete="off" action="http://www.gtzs.com/search.php?searchsubmit=yes" target="_blank">
-    <input type="hidden" name="formhash" value="844b80cc">
-    <input type="hidden" name="mod" value="forum">
-    <input type="hidden" name="srchfid[]" value="3">
-    <input type="text" name="srchtxt" id="srchtxt" class="px z" autocomplete="off" onblur="if (value ==&#39;&#39;){value=&#39;请输入搜索关键词&#39;}" onfocus="if (value ==&#39;请输入搜索关键词&#39;){value =&#39;&#39;}" value="请输入搜索关键词">
-    <button id="search_submit" name="searchsubmit" type="submit" value="true">&nbsp;&nbsp;&nbsp;&nbsp;</button>
-    </form>
-    </div>
-        </div>
+<!--    <div id="pgt" class="bm bw0 pgs cl">-->
+<!--    <span id="fd_page_top"><div class="pg"><strong>1</strong><a href="http://www.gtzs.com/forum-3-2.html">2</a><a href="http://www.gtzs.com/forum-3-3.html">3</a><a href="http://www.gtzs.com/forum-3-4.html">4</a><a href="http://www.gtzs.com/forum-3-5.html">5</a><a href="http://www.gtzs.com/forum-3-6.html">6</a><a href="http://www.gtzs.com/forum-3-7.html">7</a><a href="http://www.gtzs.com/forum-3-8.html">8</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;forum.php?mod=forumdisplay&amp;fid=3&amp;page=&#39;+this.value;; doane(event);}"><span title="共 8 页"> / 8 页</span></label><a href="http://www.gtzs.com/forum-3-2.html" class="nxt">下一页</a></div></span>-->
+<!--    <span class="pgb y"><a href="http://www.gtzs.com/forum.php">返&nbsp;回</a></span>-->
+<!--    <a href="javascript:;" id="newspecial" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=3&#39;)" title="发新帖"><img src="./img_gdxj_files/pn_post.png" alt="发新帖"></a>-->
+<!--    </div>-->
+<!--    <div class="comiis_kmlb_tabfl">-->
+<!--    <div class="comiis_ltype">-->
+<!--    <a href="./img_gdxj_files/工地巡检-衢州装修-衢州装饰-格堂装饰 - 衢州格堂装饰.html" class="comiis_ltype_an kmbtn">帖子<em>◆</em></a>-->
+<!--    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;filter=digest&amp;digest=1" class="comiis_ltype_an">精华</a>-->
+<!--    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;filter=hot" class="comiis_ltype_an">热帖</a>-->
+<!--    </div>-->
+<!--    <div class="comiis_kmlb_ss">-->
+<!--    <form id="scform" method="post" autocomplete="off" action="http://www.gtzs.com/search.php?searchsubmit=yes" target="_blank">-->
+<!--    <input type="hidden" name="formhash" value="844b80cc">-->
+<!--    <input type="hidden" name="mod" value="forum">-->
+<!--    <input type="hidden" name="srchfid[]" value="3">-->
+<!--    <input type="text" name="srchtxt" id="srchtxt" class="px z" autocomplete="off" onblur="if (value ==&#39;&#39;){value=&#39;请输入搜索关键词&#39;}" onfocus="if (value ==&#39;请输入搜索关键词&#39;){value =&#39;&#39;}" value="请输入搜索关键词">-->
+<!--    <button id="search_submit" name="searchsubmit" type="submit" value="true">&nbsp;&nbsp;&nbsp;&nbsp;</button>-->
+<!--    </form>-->
+<!--    </div>-->
+<!--        </div>-->
     <div style="clear:both;"></div>
     <div id="threadlist" class="tl">
     <div class="th comiis_topinfo">
     <table cellspacing="0" cellpadding="0">
-    <tbody><tr>
+    <tbody>
+    <tr>
     <th colspan="2">
     <div class="tf">
     <span id="atarget" onclick="setatarget(1)" class="y" title="在新窗口中打开帖子">新窗</span>
-    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline" class="xw1">全部时间</a><span class="pipe">|</span>
-    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=86400">一天</a><span class="pipe">|</span>
-    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=604800">一周</a><span class="pipe">|</span>
-    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=2592000">一个月</a><span class="pipe">|</span>
-    <a id="filter_special" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">全部主题</a>&nbsp;
-    <a id="filter_orderby" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">
-    最后发表</a>
-    <a href="javascript:;" onclick="checkForumnew_btn(&#39;3&#39;)" title="查看更新" class="forumrefresh"></a>
+<!--    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline" class="xw1">全部时间</a><span class="pipe">|</span>-->
+<!--    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=86400">一天</a><span class="pipe">|</span>-->
+<!--    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=604800">一周</a><span class="pipe">|</span>-->
+<!--    <a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=2592000">一个月</a><span class="pipe">|</span>-->
+<!--    <a id="filter_special" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">全部主题</a>&nbsp;-->
+<!--    <a id="filter_orderby" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">-->
+<!--    最后发表</a>-->
+<!--    <a href="javascript:;" onclick="checkForumnew_btn(&#39;3&#39;)" title="查看更新" class="forumrefresh"></a>-->
     <span id="clearstickthread" style="display: none;">
     <span class="pipe">|</span>
     <a href="javascript:;" onclick="clearStickThread()" class="xi2" title="显示置顶">显示置顶</a>
@@ -107,6 +109,7 @@
     <input type="hidden" name="formhash" value="844b80cc">
     <input type="hidden" name="listextra" value="page%3D1">
     <table summary="forum_3" cellspacing="0" cellpadding="0" id="threadlisttableid">
+
     <tbody id="separatorline" class="emptb">
     <tr class="ts"><td class="icn"></td><th style="font-size:14px;font-weight:700;">主题</th><td class="by"></td><td class="num"></td><td class="by"></td></tr></tbody>
         <?php if(is_array($cat_list)) foreach($cat_list as $key => $value) { ?>     <tbody id="normalthread_11800">
@@ -166,74 +169,75 @@
     <li><a href="http://www.gtzs.com/forum.php?mod=forumdisplay&amp;fid=3&amp;filter=heat&amp;orderby=heats">热门</a></li>
     </ul>
     </div>
-    <a class="bm_h" href="javascript:;" rel="forum.php?mod=forumdisplay&amp;fid=3&amp;page=2" curpage="1" id="autopbn" totalpage="8" picstyle="0" forumdefstyle="">下一页 &#187;</a>
+<!--    <a class="bm_h" href="javascript:;" rel="forum.php?mod=forumdisplay&amp;fid=3&amp;page=2" curpage="1" id="autopbn" totalpage="8" picstyle="0" forumdefstyle="">下一页 &#187;</a>-->
     <script src="./img_gdxj_files/autoloadpage.js" type="text/javascript" type="text/javascript"></script>
     <div class="bm bw0 pgs cl">
-    <span id="fd_page_bottom"><div class="pg"><strong>1</strong><a href="http://www.gtzs.com/forum-3-2.html">2</a><a href="http://www.gtzs.com/forum-3-3.html">3</a><a href="http://www.gtzs.com/forum-3-4.html">4</a><a href="http://www.gtzs.com/forum-3-5.html">5</a><a href="http://www.gtzs.com/forum-3-6.html">6</a><a href="http://www.gtzs.com/forum-3-7.html">7</a><a href="http://www.gtzs.com/forum-3-8.html">8</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;forum.php?mod=forumdisplay&amp;fid=3&amp;page=&#39;+this.value;; doane(event);}"><span title="共 8 页"> / 8 页</span></label><a href="http://www.gtzs.com/forum-3-2.html" class="nxt">下一页</a></div></span>
-    <span class="pgb y"><a href="http://www.gtzs.com/forum.php">返&nbsp;回</a></span>
-    <a href="javascript:;" id="newspecialtmp" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=3&#39;)" title="发新帖"><img src="./img_gdxj_files/pn_post.png" alt="发新帖"></a></div><!--[diy=diyfastposttop]--><div id="diyfastposttop" class="area"></div><!--[/diy]-->
-    <script type="text/javascript">
-    var postminchars = parseInt('10');
-    var postmaxchars = parseInt('10000');
-    var disablepostctrl = parseInt('0');
-    var fid = parseInt('3');
-    </script>
-    <div id="f_pst" class="bm">
-    <div class="bm_h">
-    <h2>快速发帖</h2>
-    </div>
-    <div class="bm_c">
-    <form method="post" autocomplete="off" id="fastpostform" action="http://www.gtzs.com/forum.php?mod=post&amp;action=newthread&amp;fid=3&amp;topicsubmit=yes&amp;infloat=yes&amp;handlekey=fastnewpost" onsubmit="return fastpostvalidate(this)">
-
-    <div id="fastpostreturn" style="margin:-5px 0 5px"></div>
-
-    <div class="pbt cl">
-    <input type="text" id="subject" name="subject" class="px" value="" onkeyup="strLenCalc(this, &#39;checklen&#39;, 80);" tabindex="11" style="width: 25em">
-    <span>还可输入 <strong id="checklen">80</strong> 个字符</span>
-    </div>
-
-    <div class="cl">
-    <div id="fastsmiliesdiv" class="y"><div id="fastsmiliesdiv_data"><div id="fastsmilies"></div></div></div><div class="hasfsl" id="fastposteditor">
-    <div class="tedt">
-    <div class="bar">
-    <span class="y">
-    <a href="http://www.gtzs.com/forum.php?mod=post&amp;action=newthread&amp;fid=3" onclick="switchAdvanceMode(this.href);doane(event);">高级模式</a>
-    </span><script src="./img_gdxj_files/seditor.js" type="text/javascript" type="text/javascript"></script>
-    <div class="fpd">
-    <a href="javascript:;" title="文字加粗" class="fbld">B</a>
-    <a href="javascript:;" title="设置文字颜色" class="fclr" id="fastpostforecolor">Color</a>
-    <a id="fastpostimg" href="javascript:;" title="图片" class="fmg">Image</a>
-    <a id="fastposturl" href="javascript:;" title="添加链接" class="flnk">Link</a>
-    <a id="fastpostquote" href="javascript:;" title="引用" class="fqt">Quote</a>
-    <a id="fastpostcode" href="javascript:;" title="代码" class="fcd">Code</a>
-    <a href="javascript:;" class="fsml" id="fastpostsml">Smilies</a>
-    </div></div>
-    <div class="area">
-    <div class="pt hm">
-    您需要登录后才可以发帖 <a href="http://www.gtzs.com/member.php?mod=logging&amp;action=login" onclick="showWindow(&#39;login&#39;, this.href)" class="xi2">登录</a> | <a href="http://www.gtzs.com/member.php?mod=register" class="xi2">立即注册</a>
-
-
-    <a href="http://www.gtzs.com/connect.php?mod=login&amp;op=init&amp;referer=forum.php%3Fmod%3Dforumdisplay%26fid%3D3%26page%3D1&amp;statfrom=login" target="_top" rel="nofollow"><img src="./img_gdxj_files/qq_login(1).gif" class="vm"></a>
-
-
-                        <span class="pipe">|</span><a id="zhikai_wxlogin" href="javascript:;" onclick="showWindow(&#39;zhikai_wxlogin&#39;, &#39;plugin.php?id=zhikai_wxlogin&amp;mod=qrcode&#39;);return false;"><img align="absmiddle" src="./img_gdxj_files/wechat_login.png"></a>
-                        </div>
-    </div>
-    </div>
-    </div>
-    <div id="seccheck_fastpost">
-    </div>
-
-    <input type="hidden" name="formhash" value="844b80cc">
-    <input type="hidden" name="usesig" value="">
-    </div>
-
-
-    <p class="ptm pnpost">
-    <a href="http://www.gtzs.com/home.php?mod=spacecp&amp;ac=credit&amp;op=rule&amp;fid=3" class="y" target="_blank">本版积分规则</a>
-    <button type="submit" onmouseover="checkpostrule(&#39;seccheck_fastpost&#39;, &#39;ac=newthread&#39;);this.onmouseover=null" name="topicsubmit" id="fastpostsubmit" value="topicsubmit" tabindex="13" class="pn pnc"><strong>写好了，发布</strong></button><span class="comiis_fbtx">Ctrl + Enter 快速发布</span>
-    </p>
-    </form>
+<!--    <span id="fd_page_bottom"><div class="pg"><strong>1</strong><a href="http://www.gtzs.com/forum-3-2.html">2</a><a href="http://www.gtzs.com/forum-3-3.html">3</a><a href="http://www.gtzs.com/forum-3-4.html">4</a><a href="http://www.gtzs.com/forum-3-5.html">5</a><a href="http://www.gtzs.com/forum-3-6.html">6</a><a href="http://www.gtzs.com/forum-3-7.html">7</a><a href="http://www.gtzs.com/forum-3-8.html">8</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;forum.php?mod=forumdisplay&amp;fid=3&amp;page=&#39;+this.value;; doane(event);}"><span title="共 8 页"> / 8 页</span></label><a href="http://www.gtzs.com/forum-3-2.html" class="nxt">下一页</a></div></span>-->
+<!--    <span class="pgb y"><a href="http://www.gtzs.com/forum.php">返&nbsp;回</a></span>-->
+<!--    <a href="javascript:;" id="newspecialtmp" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=3&#39;)" title="发新帖"><img src="./img_gdxj_files/pn_post.png" alt="发新帖"></a></div>-->
+<!--            <div id="diyfastposttop" class="area"></div>-->
+<!--    <script type="text/javascript">-->
+<!--    var postminchars = parseInt('10');-->
+<!--    var postmaxchars = parseInt('10000');-->
+<!--    var disablepostctrl = parseInt('0');-->
+<!--    var fid = parseInt('3');-->
+<!--    </script>-->
+<!--    <div id="f_pst" class="bm">-->
+<!--    <div class="bm_h">-->
+<!--    <h2>快速发帖</h2>-->
+<!--    </div>-->
+<!--    <div class="bm_c">-->
+<!--    <form method="post" autocomplete="off" id="fastpostform" action="http://www.gtzs.com/forum.php?mod=post&amp;action=newthread&amp;fid=3&amp;topicsubmit=yes&amp;infloat=yes&amp;handlekey=fastnewpost" onsubmit="return fastpostvalidate(this)">-->
+<!---->
+<!--    <div id="fastpostreturn" style="margin:-5px 0 5px"></div>-->
+<!---->
+<!--    <div class="pbt cl">-->
+<!--    <input type="text" id="subject" name="subject" class="px" value="" onkeyup="strLenCalc(this, &#39;checklen&#39;, 80);" tabindex="11" style="width: 25em">-->
+<!--    <span>还可输入 <strong id="checklen">80</strong> 个字符</span>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="cl">-->
+<!--    <div id="fastsmiliesdiv" class="y"><div id="fastsmiliesdiv_data"><div id="fastsmilies"></div></div></div><div class="hasfsl" id="fastposteditor">-->
+<!--    <div class="tedt">-->
+<!--    <div class="bar">-->
+<!--    <span class="y">-->
+<!--    <a href="http://www.gtzs.com/forum.php?mod=post&amp;action=newthread&amp;fid=3" onclick="switchAdvanceMode(this.href);doane(event);">高级模式</a>-->
+<!--    </span><script src="./img_gdxj_files/seditor.js" type="text/javascript" type="text/javascript"></script>-->
+<!--    <div class="fpd">-->
+<!--    <a href="javascript:;" title="文字加粗" class="fbld">B</a>-->
+<!--    <a href="javascript:;" title="设置文字颜色" class="fclr" id="fastpostforecolor">Color</a>-->
+<!--    <a id="fastpostimg" href="javascript:;" title="图片" class="fmg">Image</a>-->
+<!--    <a id="fastposturl" href="javascript:;" title="添加链接" class="flnk">Link</a>-->
+<!--    <a id="fastpostquote" href="javascript:;" title="引用" class="fqt">Quote</a>-->
+<!--    <a id="fastpostcode" href="javascript:;" title="代码" class="fcd">Code</a>-->
+<!--    <a href="javascript:;" class="fsml" id="fastpostsml">Smilies</a>-->
+<!--    </div></div>-->
+<!--    <div class="area">-->
+<!--    <div class="pt hm">-->
+<!--    您需要登录后才可以发帖 <a href="http://www.gtzs.com/member.php?mod=logging&amp;action=login" onclick="showWindow(&#39;login&#39;, this.href)" class="xi2">登录</a> | <a href="http://www.gtzs.com/member.php?mod=register" class="xi2">立即注册</a>-->
+<!---->
+<!---->
+<!--    <a href="http://www.gtzs.com/connect.php?mod=login&amp;op=init&amp;referer=forum.php%3Fmod%3Dforumdisplay%26fid%3D3%26page%3D1&amp;statfrom=login" target="_top" rel="nofollow"><img src="./img_gdxj_files/qq_login(1).gif" class="vm"></a>-->
+<!---->
+<!---->
+<!--                        <span class="pipe">|</span><a id="zhikai_wxlogin" href="javascript:;" onclick="showWindow(&#39;zhikai_wxlogin&#39;, &#39;plugin.php?id=zhikai_wxlogin&amp;mod=qrcode&#39;);return false;"><img align="absmiddle" src="./img_gdxj_files/wechat_login.png"></a>-->
+<!--                        </div>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--    <div id="seccheck_fastpost">-->
+<!--    </div>-->
+<!---->
+<!--    <input type="hidden" name="formhash" value="844b80cc">-->
+<!--    <input type="hidden" name="usesig" value="">-->
+<!--    </div>-->
+<!---->
+<!---->
+<!--    <p class="ptm pnpost">-->
+<!--    <a href="http://www.gtzs.com/home.php?mod=spacecp&amp;ac=credit&amp;op=rule&amp;fid=3" class="y" target="_blank">本版积分规则</a>-->
+<!--    <button type="submit" onmouseover="checkpostrule(&#39;seccheck_fastpost&#39;, &#39;ac=newthread&#39;);this.onmouseover=null" name="topicsubmit" id="fastpostsubmit" value="topicsubmit" tabindex="13" class="pn pnc"><strong>写好了，发布</strong></button><span class="comiis_fbtx">Ctrl + Enter 快速发布</span>-->
+<!--    </p>-->
+<!--    </form>-->
     </div>
     </div><!--[diy=diyforumdisplaybottom]--><div id="diyforumdisplaybottom" class="area"></div><!--[/diy]-->
     </div>

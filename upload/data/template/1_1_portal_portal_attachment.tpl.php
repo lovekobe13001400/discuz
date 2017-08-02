@@ -1,7 +1,7 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/default/portal/portal_attachment.htm', './template/default/common/header_ajax.htm', 1501291814, '1', './data/template/1_1_portal_portal_attachment.tpl.php', './template/default', 'portal/portal_attachment')
-|| checktplrefresh('./template/default/portal/portal_attachment.htm', './template/default/common/footer_ajax.htm', 1501291814, '1', './data/template/1_1_portal_portal_attachment.tpl.php', './template/default', 'portal/portal_attachment')
+|| checktplrefresh('./template/default/portal/portal_attachment.htm', './template/default/common/header_ajax.htm', 1501674798, '1', './data/template/1_1_portal_portal_attachment.tpl.php', './template/default', 'portal/portal_attachment')
+|| checktplrefresh('./template/default/portal/portal_attachment.htm', './template/default/common/footer_ajax.htm', 1501674798, '1', './data/template/1_1_portal_portal_attachment.tpl.php', './template/default', 'portal/portal_attachment')
 ;?>
 <?php ob_end_clean();
 ob_start();
